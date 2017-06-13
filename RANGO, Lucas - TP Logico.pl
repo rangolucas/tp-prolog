@@ -8,6 +8,7 @@ pareja(bernardo, charo). %Punto 2, Parte 1
 trabajaPara(marsellus, vincent).
 trabajaPara(marsellus, jules).
 trabajaPara(marsellus, winston).
+
 %Punto 3
 trabajaPara(Superior, bernardo) :-
   trabajaPara(marsellus, Superior),
@@ -143,7 +144,7 @@ respetabilidad(CantidadRespetables, CantidadNoRespetables) :-
   CantidadNoRespetables is CantidadPersonajes - CantidadRespetables.
 
 cantidadPersonajesRespetables(Cantidad) :-
-  findall(Personaje, esRespetable(Personaje), Respetables),
+  findall(_, esRespetable(_), Respetables),
   length(Respetables, Cantidad).
 
 cantidadPersonajes(CantidadPersonajes) :-
