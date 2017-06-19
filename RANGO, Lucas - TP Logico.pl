@@ -80,16 +80,15 @@ amigo(vincent, elVendedor).
 
 %Punto 1
 esPeligroso(Personaje) :-
-  actividadPeligrosa(Personaje).
+  personaje(Personaje, Ocupacion)
+  actividadPeligrosa(Ocupacion).
 
 esPeligroso(Personaje) :-
   jefePeligroso(Personaje).
 
-actividadPeligrosa(Personaje) :-
-  personaje(Personaje, mafioso(maton)).
+actividadPeligrosa(mafioso(maton)).
 
-actividadPeligrosa(Personaje) :-
-  personaje(Personaje, ladron(QueRoba)),
+actividadPeligrosa(ladron(QueRoba)) :-
   member(licorerias, QueRoba).
 
 jefePeligroso(Personaje) :-
